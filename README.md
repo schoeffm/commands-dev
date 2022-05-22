@@ -1,6 +1,6 @@
 # cmd
 
-A quarkus based CLI tool to do quick snippet-lookups (en/de vs de/en) based on [www.commands.dev](https://www.commands.dev)
+A quarkus based CLI tool to do quick snippet-lookups based on [www.commands.dev](https://www.commands.dev)
 
 ## Usage
 ```bash
