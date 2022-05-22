@@ -76,16 +76,6 @@ As already mentioned - this project makes use of Quarkus and PicoCLI to create a
 
 You can then execute your native executable with: `./target/cmd-1.0.0-SNAPSHOT-runner` - it's recommended to rename or define an alias for the final result
 
-### Produce a Autocompletion-Script
-
-There is a bash-script included that does all for you (buliding a native image as well as generating an autocompletion script):
-```bash
-$>./buildAll.sh
-$> # or do it manually
-$> cd target/quarkus-app
-$> java -cp $(ls lib/main | awk '{print "lib/main/" $1}' | tr "\n" ":")../cmd-1.0.0-SNAPSHOT.jar picocli.AutoComplete de.bender.commandsdev.boundary.Commands
-```
-
 ### Related Guides
 
 - Picocli ([guide](https://quarkus.io/guides/picocli)): Develop command line applications with Picocli

@@ -2,6 +2,7 @@ package de.bender.commandsdev.boundary;
 
 import de.bender.commandsdev.control.OutputFormatter;
 import de.bender.commandsdev.control.OutputFormatter.OutputFormat;
+import io.quarkus.picocli.runtime.annotations.TopCommand;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Parameters;
@@ -26,9 +27,11 @@ import static java.net.http.HttpClient.Redirect.NORMAL;
 import static java.net.http.HttpClient.Version.HTTP_1_1;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
+@TopCommand
 @Command(name = "cmd",
         mixinStandardHelpOptions = true,
         version = "1.0.0",
+        subcommands = { Completion.class },
         description = """
                 CLI tool to integrate with www.commands.dev in order to quickly lookup commands-snippets.
                 Can be integrated with Alfred (a MacOS AppLauncher) or used from the terminal (default-output).
